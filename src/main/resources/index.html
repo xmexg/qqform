@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>QQ收集表</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="info" v-if="id">{{message}}-{{name}}</div>
+
+        <div id="handle" v-else>
+            <div class="login-container">
+                <div class="switch-tab">
+                    <div class="tab" :class="{ active: loginMethod === 'id' }" @click="switchTab('id')">ID登录</div>
+                    <div class="tab" :class="{ active: loginMethod === 'cookie' }" @click="switchTab('cookie')">Cookie登录
+                    </div>
+                </div>
+                <div class="loginform" v-if="loginMethod === 'id'">
+                    <h2>你的登录码:</h2>
+                    <p id="loginNumber">{{loginNumber}}</p>
+                </div>
+                <div class="loginform" v-if="loginMethod === 'cookie'">
+                    <h2>请输入你的Cookie:</h2>
+                    <div style="position: relative; margin-bottom: 20px;">
+                        <input id="Cinput" type="text" v-model="cookie">
+                        <span id="Clabel" :class="{ Clabel_change: cookie.trim() != '' }">Cookie</span>
+                    </div>
+                    <button @click="loginByCookie">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/vue.global.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

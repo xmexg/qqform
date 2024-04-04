@@ -1,0 +1,108 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom right,rgb(137, 154, 248),rgb(174, 106, 252));
+}
+
+#app{
+    width: 100%;
+    height: 100%;
+}
+
+#handle {
+    color: #fff;
+    font-size: larger;
+    font-weight: bolder;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.login-container {
+    width: 300px;
+    padding: 40px;
+    margin: 100px auto;
+    border-radius: 15px;
+    background-color: rgb(95, 76, 194);
+    box-shadow: 0 10px 50px 0px rgb(59,45,159);
+    transition: 1s;
+}
+
+.switch-tab {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tab {
+    cursor: pointer;
+    color: #d5ebe1;
+    transition: 0.5s;
+}
+
+.tab:hover{
+    color: #EDDD16;
+    border-bottom: 3px solid #EDDD16;
+}
+
+.active {
+    color: #fff;
+    border-bottom: 3px solid aqua;
+}
+
+.loginform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#loginNumber{
+    font-size: 5rem;
+    text-align: center;
+}
+
+input{
+    font-size: 1.5em;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: #fff solid 2px;
+    padding-top: 1em;
+    background: none;
+    color: #fff;
+}
+
+#Clabel{
+    position: absolute;
+    left: 0px;
+    bottom: 0em;
+    transition: .5s;
+    font-size: xx-large;
+    pointer-events: none;
+}
+
+.Clabel_change{
+    transform: scale(0.7) translate(-1em,-1.4em);
+}
+
+button{
+    border: 1px solid rgb(237, 221, 22);
+    color: #fff;
+    padding: 10px;
+    line-height: 25px;
+    border-radius: 25px;
+    bottom: 10px;
+    transition: .2s;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0);
+}
+
+button:hover{
+    background-color: #EDDD16;
+}
